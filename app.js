@@ -12,7 +12,11 @@
 
     console.log(this);
     //console.log('moosipurgi sees');
-    this.init(); // Panen rakenduse tööle
+    //Kõik muutujad, mis on üldised ja muudetavad
+    this.click_count = 0;
+
+    // Panen rakenduse tööle
+    this.init();
     };
 
     //Kõik moosipurgi fn tulevad siia sisse
@@ -27,8 +31,9 @@
         document.querySelector('.add-new-jar').addEventListener('click', this.addNewClick.bind(this));
       },
       addNewClick: function(event) {
-        console.log(event);
-
+        //console.log(event);
+        this.click_count++;
+        console.log(this.click_count);
       }
 
 
